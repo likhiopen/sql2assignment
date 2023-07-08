@@ -1,0 +1,12 @@
+create database sales;
+use sales;
+create table order(order_id int (primary key),customer_id int,order_date date,order_total int);
+alter table order modify order_total decimal;
+insert into order values(1111,123,2023-05-01,20.00);
+insert into order values(1121,121,2023-07-12,20.00);
+insert into order values(1131,125,2023-04-02,20.00);
+select *from order;
+select order_id from order where order_id between 1111 and 1121;
+select order_id from order where order_id between 1111 or 1121;
+select order_id from order where order_id in (1111 , 1121);
+  
